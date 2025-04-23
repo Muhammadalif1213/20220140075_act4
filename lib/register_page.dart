@@ -51,9 +51,10 @@ class _RegisterPageState extends State<RegisterPage> {
               ElevatedButton(onPressed: () {}, child: Text('Register')),
               TextButton(
                 onPressed: () {
+                  Navigator.pushNamed(context, '/login');
                   // Navigator.pop(context);
-                  Navigator.push(context, 
-                  MaterialPageRoute(builder: (context) => const LoginPage()));
+                  // Navigator.push(context, 
+                  // MaterialPageRoute(builder: (context) => const LoginPage()));
                 },
                 child: Text('Sudah punya akun? Login sekarang!'),
               ),
