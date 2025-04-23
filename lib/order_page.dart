@@ -16,8 +16,8 @@ class _OrderPageState extends State<OrderPage> {
   int totalHarga = 0;
 
   void calculateTotalPrice() {
-    int jumlahMakanan = int.tryParse(makananController.text) ?? 0;
-    int jumlahMinuman = int.tryParse(minumanController.text) ?? 0;
+    int jumlahMakanan = int.tryParse(jumlahMakananController.text) ?? 0;
+    int jumlahMinuman = int.tryParse(jumlahMinumanController.text) ?? 0;
 
     setState(() {
       totalHarga = (jumlahMakanan * 32000) + (jumlahMinuman * 5000);
