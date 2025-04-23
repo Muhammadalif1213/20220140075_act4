@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/home_page.dart';
 
 class DetailOrderPage extends StatelessWidget {
   final String makanan;
@@ -18,6 +19,20 @@ class DetailOrderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Detail Order Page')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Food Order: $makanan'),
+            Text('Drink Order: $minuman'),
+            Text('Food QTY Order: $jumlahMakanan'),
+            Text('Drink QTY Order: $jumlahMinuman'),
+            Text('Total Price: $totalHarga'),
+          ],
+        ),
+      ),
     );
   }
 }
